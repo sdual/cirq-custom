@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "cirq-custom-gate"
+name = "cirq-custom"
 version = "0.1.0"
 description = ""
 authors = ["sdual <shr.nrht.0623@gmail.com>"]
