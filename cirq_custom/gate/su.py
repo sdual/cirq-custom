@@ -2,6 +2,7 @@ from typing import Union, List, Tuple
 
 import numpy as np
 import sympy
+import cirq
 from cirq import value, protocols
 from cirq.ops import gate_features, eigen_gate
 from cirq.ops.eigen_gate import EigenComponent
@@ -49,3 +50,6 @@ def yy_rot(rads: value.TParamVal) -> YYRot:
 def zz_rot(rads: value.TParamVal) -> ZZRot:
     pi = sympy.pi if protocols.is_parameterized(rads) else np.pi
     return ZZRot(exponent=rads / pi, global_shift=-0.5)
+
+def append_su4():
+    cirq
