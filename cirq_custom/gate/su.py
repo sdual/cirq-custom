@@ -67,12 +67,12 @@ def append_su4(circuit: cirq.Circuit, qubit1: cirq.ops.Qid, qubit2: cirq.ops.Qid
         raise ValueError('invalid params nums.')
 
     append_su2(circuit, qubit1, k1_params[0], k1_params[1], k1_params[2])
-    append_su2(circuit, qubit2, k1_params[3], k1_params[4], k1_params[6])
+    append_su2(circuit, qubit2, k1_params[3], k1_params[4], k1_params[5])
 
     circuit.append(zz_rot(a_params[0]).on(qubit1, qubit2))
     circuit.append(yy_rot(a_params[1]).on(qubit1, qubit2))
     circuit.append(zz_rot(a_params[2]).on(qubit1, qubit2))
 
     append_su2(circuit, qubit1, k2_params[0], k2_params[1], k2_params[2])
-    append_su2(circuit, qubit2, k2_params[3], k2_params[4], k2_params[6])
+    append_su2(circuit, qubit2, k2_params[3], k2_params[4], k2_params[5])
     return circuit
